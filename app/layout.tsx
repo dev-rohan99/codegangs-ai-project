@@ -1,5 +1,4 @@
 "use client"
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import VoiceAgent from "@/components/VoiceAgent";
@@ -87,7 +86,7 @@ export default function RootLayout({
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
-                    to={link.path}
+                    href={link.path}
                     onClick={() => setIsMenuOpen(false)}
                     className={`block px-3 py-2 rounded-md text-base font-medium ${
                       isActive(link.path)
